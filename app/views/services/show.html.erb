@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @service.name %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @service.details %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @service.image %>
+</p>
+
+<p>
+  <strong>Support required:</strong>
+  <%= @service.support_required %>
+</p>
+
+<p>
+  <strong>Minimum feature detail:</strong>
+  <%= @service.minimum_feature_detail %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @service.price %>
+</p>
+
+<p>
+  <strong>File upload:</strong>
+  <%= @service.file_upload %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>
