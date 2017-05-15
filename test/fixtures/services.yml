@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  details: MyString
+  image: MyString
+  support_required: MyString
+  minimum_feature_detail: MyString
+  price: MyString
+  file_upload: MyString
+
+two:
+  name: MyString
+  details: MyString
+  image: MyString
+  support_required: MyString
+  minimum_feature_detail: MyString
+  price: MyString
+  file_upload: MyString
