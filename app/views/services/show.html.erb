@@ -35,5 +35,23 @@
   <%= @service.file_upload %>
 </p>
 
+<p>
+  <strong>address_map:</strong>
+  <%= @service.address_map %>
+</p>
+
+<p>
+  <strong>latitude:</strong>
+  <%= @service.latitude %>
+</p>
+<p>
+  <strong>longitude:</strong>
+  <%= @service.longitude %>
+</p>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@service.latitude}%2C#{@service.longitude}" %>
+
+
 <%= link_to 'Edit', edit_service_path(@service) %> |
 <%= link_to 'Back', services_path %>
+

@@ -1,2 +1,115 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+ <!--========== SLIDER ==========-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="container">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+            </div>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="img-responsive" src="/assets/3dhome4.jpg" alt="Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h1 class="carousel-title">Local 3D printing</h1>
+                                <h3 class="h3n">Find a 3D printing service and get your parts <br/>The first time in Iraq</h3>
+                            </div>
+                            <a ><%= link_to '3D printing service', services_path, class:"btn-theme btn-theme-sm btn-white-brd text-uppercase label-info" %></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="/assets/3dhome.jpg" alt="Slider Image">
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h2 class="carousel-title">Local 3D printing</h2>
+                            <h3 class="h3n">  Find a 3D printing service and get your parts <br/>The first time in Iraq</h3>
+                            <a ><%= link_to '3D printing service ', services_path, class:"btn-theme btn-theme-sm btn-white-brd text-uppercase label-info" %></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        
+        <!--========== SLIDER ==========-->
+    
+        <!-- Latest Products -->
+        <div class="content-lg container">
+            <div class="row margin-b-40">
+                <div class="col-sm-6">
+                    <h2> type of material</h2>
+                    <p>All these types of materials are available on the site</p>
+                </div>
+            </div>
+            <!--// end row -->
+
+            <div class="row">
+                <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                            <img class="img-responsive" src="assets/fdm.jpg" alt="Latest Products Image">
+                        </div>
+                    </div>
+                    <h4><a href="#">Fused Deposition Modeling </a> <span class="text-uppercase margin-l-20"> (FDM)</span></h4>
+                    <p>The FDM printing process starts with a string of solid material called the filament. This line of filament is guided from a reel attached to the 3D printer</p>
+                    
+                </div>
+                <!-- End Latest Products -->
+
+                <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                            <img class="img-responsive" src="assets/dlp.jpg" alt="Latest Products Image">
+                        </div>
+                    </div>
+                    <h4><a href="#">Stereolithography and Digital Light Processing </a> <span class="text-uppercase margin-l-20">(SLA & DLP)</span></h4>
+                    <p>To create a 3D printed object, a build platform is submerged into a translucent tank filled with liquid resin. Once the build platform is submerged</p>
+                 
+                </div>
+                <!-- End Latest Products -->
+
+                <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                            <img class="img-responsive" src="assets/t-rex.jpg" alt="Latest Products Image">
+                        </div>
+                    </div>
+                    <h4><a href="#">Selective Laser Sintering</a> <span class="text-uppercase margin-l-20">(SLS)</span></h4>
+                    <p>Selective Laser Sintering (SLS) uses a laser to melt and solidify layers of powdered material into finished objects.</p>
+                   
+                </div>
+                <!-- End Latest Products -->
+            </div>
+            <!--// end row -->
+        </div>
+        <!-- End Latest Products -->
+         <!-- Promo Section -->
+        <div class="promo-section overflow-h">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="ver-center">
+                        <div class="ver-center-aligned">
+                            <div class="promo-section-col">
+                                <h2>Why designers and engineers use 3d services for their 3D printing</h2>
+                                <p>Competitive pricingUpload your files and instantly compare quotes from multiple service providers.</p>
+                                <p>Fast Get your 3D printed parts within 48 hours on average, using our network of 3D printing services.</p>
+                                <p>Material options  Access the full spectrum of 3D printing materials, from affordable prototyping plastics to industrial metals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promo-section-img-right">
+                <img src="assets/rits1.jpg" alt="Content Image" width="600" height="600">
+            </div>
+        </div>
+         <!-- jQuery -->
+    <script src="/assets/jquery.min.js"></script>

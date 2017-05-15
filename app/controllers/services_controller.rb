@@ -1,10 +1,11 @@
 class ServicesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all
+    @services =Service.where(user_id: current_user)
   end
 
   # GET /services/1
@@ -14,7 +15,7 @@ class ServicesController < ApplicationController
 
   # GET /services/new
   def new
-    @service = Service.new
+    @service =current_user.services.build
   end
 
   # GET /services/1/edit
@@ -24,7 +25,7 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
-    @service = Service.new(service_params)
+    @service = current_user.services.build(service_params)
 
     respond_to do |format|
       if @service.save
@@ -35,6 +36,15 @@ class ServicesController < ApplicationController
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end
+    #save file to server 
+ uploaded_io =params[:service][:image]
+ File.open("public/uploads/"+ uploaded_io.original_filename,'wb') do |file|
+    file.write(uploaded_io.read)
+  end
+  @service.image=uploaded_io.original_filename
+  @service.file_upload=uploaded_io.original_filename
+  
+#end seve 
   end
 
   # PATCH/PUT /services/1
@@ -69,6 +79,6 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:name, :details, :image, :support_required, :minimum_feature_detail, :price, :file_upload)
+      params.require(:service).permit(:name, :details, :image, :support_required, :minimum_feature_detail, :price, :file_upload ,:address_map)
     end
 end

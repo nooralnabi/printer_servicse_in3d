@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   sessions:'users/sessions'
     
   } 
-  
+  get 'home/how3dworks'
   get 'home/index'
   root 'home#index'
   

@@ -1,12 +1,12 @@
 Rails.application.configure do
   
-   config.action_mailer.default_url_options = { host: 'localhost' }
+   config.action_mailer.default_url_options = { host: 'https://printer-services-3d-nooralnabi.c9users.io' }
    
    config.action_mailer.smtp_settings = {
        :address              => "smtp.gmail.com",
        :port                 =>  587,
-       :user_name            => 'PUT YOUR E-MAIL USER NAME HERE',
-       :password             =>  'PUT YOUR E-MAIL PASSWORD HERE',
+       :user_name            => 'nooalnabirails@gmail.com',
+       :password             =>  'nooralnabi123',
        :authentication       => 'plain',
        :enable_starttls_auto => true  }
   
@@ -31,7 +31,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
