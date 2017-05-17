@@ -25,8 +25,8 @@
       <tr>
         <td><%= service.name %></td>
         <td><%= service.details %></td>
-      <td><%= service.image %></td>
-       <td><%= service.file_upload %></td>
+      <td><%= image_tag service.image %></td>
+       <td> <a href="<%= service.file_upload %>">Download</a></td>
         <td><%= service.support_required %></td>
         <td><%= service.minimum_feature_detail %></td>
         <td><%= service.price %></td>

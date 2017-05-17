@@ -50,3 +50,11 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'geocoder'
 gem "font-awesome-rails"
+#for admin page 
+gem 'activeadmin'
+gem 'active_skin'
+#image upload
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick', '~> 4.7'
