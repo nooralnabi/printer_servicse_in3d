@@ -11,6 +11,8 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
   def show
+
+    
   end
 
   # GET /services/new
@@ -26,7 +28,15 @@ class ServicesController < ApplicationController
   # POST /services.json
   def create
     @service = current_user.services.build(service_params)
-
+  #save file to server 
+ uploaded_io =params[:service][:image]
+ File.open("public/images/"+ uploaded_io.original_filename,'wb') do |file|
+    file.write(uploaded_io.read)
+  end
+  @service.image=uploaded_io.original_filename
+ 
+  
+#end seve 
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: 'Service was successfully created.' }
@@ -36,15 +46,7 @@ class ServicesController < ApplicationController
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end
-    #save file to server 
- uploaded_io =params[:service][:image]
- File.open("public/uploads/"+ uploaded_io.original_filename,'wb') do |file|
-    file.write(uploaded_io.read)
-  end
-  @service.image=uploaded_io.original_filename
-  @service.file_upload=uploaded_io.original_filename
   
-#end seve 
   end
 
   # PATCH/PUT /services/1

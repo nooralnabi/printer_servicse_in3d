@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :services
   devise_for :users , controllers:{
   sessions:'users/sessions'
-    
   } 
+  resources :assets, only: [:create]
   get 'home/how3dworks'
   get 'home/index'
+  get 'posts/blog'
   root 'home#index'
   
  
