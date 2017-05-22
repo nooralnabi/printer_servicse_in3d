@@ -1,0 +1,3 @@
+<p><%= @contact.message %></p>
+<p>---------------------</p>
+<p><%= ContactUs.require_name ? t('.nooralnabirails', :email => @contact.email, :name => @contact.name) : t('.nooralnabirails', :email => @contact.email) %></p>

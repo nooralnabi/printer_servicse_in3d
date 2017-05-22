@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   sessions:'users/sessions'
   } 
   resources :assets, only: [:create]
+  get 'contact_us/contacts/new'
+  get 'home/googlemap'
   get 'home/how3dworks'
   get 'home/index'
   get 'posts/blog'

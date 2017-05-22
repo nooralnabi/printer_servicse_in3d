@@ -31,12 +31,12 @@
   <strong>Price:</strong>
   <%= @service.price %>
 </p>
-
+<!--
 <p>
   <strong>File upload:</strong>
-  <%= @service.file_upload %>
+  #@service.file_upload %>
 </p>
-
+-->
 <p>
   <strong>address_map:</strong>
   <%= @service.address_map %>
@@ -51,7 +51,7 @@
   <%= @service.longitude %>
 </p>
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@service.latitude}%2C#{@service.longitude}" %>
+
 
 
 <%= link_to 'Edit', edit_service_path(@service) %> |

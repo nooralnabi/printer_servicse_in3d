@@ -1,3 +1,6 @@
+
+
+
 <div class="container-fluid">
   
 
@@ -11,7 +14,7 @@
       <th>Name</th>
       <th>Details</th>
       <th>Image</th>
-      <th>File upload</th>
+      <!--<th>File upload</th>-->
       <th>Support required</th>
       <th>Minimum feature detail</th>
       <th>Price</th>
@@ -26,7 +29,7 @@
         <td><%= service.name %></td>
         <td><%= service.details %></td>
       <td><%= image_tag service.image %></td>
-       <td> <a href="<%= service.file_upload %>">Download</a></td>
+        <!--<td> <a href="# service.file_upload %>">Download</a></td>-->
         <td><%= service.support_required %></td>
         <td><%= service.minimum_feature_detail %></td>
         <td><%= service.price %></td>
@@ -42,3 +45,7 @@
 
 <%= link_to 'New Service', new_service_path %>
 </div>
+
+
+
+

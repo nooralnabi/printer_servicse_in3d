@@ -1,12 +1,23 @@
 class ServicesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-
+  
+  
+  
+  
   # GET /services
   # GET /services.json
   def index
     @services =Service.where(user_id: current_user)
+      @hash = Gmaps4rails.build_markers(@services) do |service, marker|
+  marker.lat service.latitude
+  marker.lng service.longitude
+  marker.infowindow service.name
+end
   end
+
+
+
 
   # GET /services/1
   # GET /services/1.json
@@ -34,9 +45,10 @@ class ServicesController < ApplicationController
     file.write(uploaded_io.read)
   end
   @service.image=uploaded_io.original_filename
- 
-  
+
 #end seve 
+
+
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: 'Service was successfully created.' }
