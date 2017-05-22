@@ -58,3 +58,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 gem 'carrierwave', '~> 1.1'
 gem 'mini_magick', '~> 4.7'
+#contact form
+gem 'contact_us', '~> 1.0.1'
+#google map 
+gem 'gmaps4rails'

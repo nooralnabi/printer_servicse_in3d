@@ -9,8 +9,10 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 //= require jquery.min
+//= require bootstrap
+//= require underscore
+//= require gmaps/google
 //= require swiper
 //= require bootstrap-sprockets
 //= require turbolinks
